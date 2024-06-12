@@ -35,5 +35,9 @@ fun CalcDisplay(){
 fun CalcNumericButton(){
 
 }
+@Composable
+fun CalcOperationButton(){
+
+}
 
 
