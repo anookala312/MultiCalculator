@@ -31,4 +31,9 @@ fun CalcRow(){
 fun CalcDisplay(){
 
 }
+@Composable
+fun CalcNumericButton(){
+
+}
+
 
