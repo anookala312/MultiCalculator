@@ -59,6 +59,26 @@ fun CalcView(){
         displayText.value = rightNumber.toString()
     }
     else{displayText.value = leftNumber.toString()}
+    fun numberPress(btnNum:Int){
+        if (complete) {
+            leftNumber=0
+            rightNumber=0
+            operation=""
+            complete=false
+        }
+        if(operation.isNotBlank() && !complete){
+            rightNumber=(rightNumber*10)+btnNum
+        }
+        if (operation.isBlank() && !complete){
+            leftNumber=(leftNumber*10)+btnNum
+        }
+    }
+    fun operationPress(op:String){
+        if(complete == false) operation = op
+    }
+    fun equalPress(){
+        complete = true
+    }
     Column (modifier = Modifier.background(Color.LightGray)){
         Row {
             CalcDisplay(display = displayText)
